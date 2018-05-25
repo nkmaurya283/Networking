@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -28,11 +29,11 @@ public class InitilizeWebdrivers {
         if (browserName.equalsIgnoreCase("chrome")) {
              DesiredCapabilities cap=DesiredCapabilities.firefox();
              cap.setCapability("marionette",true);
-             //FirefoxOptions op=new FirefoxOptions(cap);
-
+            ChromeOptions op=new ChromeOptions();
+            op.setHeadless(true);
 
              System.setProperty("webdriver.chrome.driver",ResourceHelper.getResourcePath("drivers/chromedriver.exe"));
-             driver=new ChromeDriver();
+             driver=new ChromeDriver(op);
              String url=Testarguments.getUrl();
              driver.get(url);
 
