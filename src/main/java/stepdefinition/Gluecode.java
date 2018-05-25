@@ -2,12 +2,14 @@ package stepdefinition;
 
 import Testbase.InitilizeWebdrivers;
 import Testbase.Testarguments;
+import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 
 
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
@@ -19,12 +21,13 @@ public class Gluecode {
     Home page;
     WebDriver driver;
     InitilizeWebdrivers init;
+    WebDriver x;
 
 @Before
 public void setUp(){
-    init=new InitilizeWebdrivers();
-    init.getBrowser("chrome");
-    page=new Home(driver);
+    init=new InitilizeWebdrivers(driver);
+    x= init.getBrowser("chrome");
+    page=new Home(x);
 
 }
 
@@ -34,12 +37,21 @@ public void setUp(){
       page.login();
 
     }
-    @After
-    public void tearDown(Scenario scenario){
-    if(scenario.isFailed()){
-        String name=scenario.getName();
-        Log.info(""+name);
+    @Then("^I go login to the facebook page$")
+    public void iGoLoginToTheFacebookPage() throws Throwable {
+      page.enterUserID();
     }
 
+    @Then("^I enter user pass$")
+    public void iEnterUserPass() throws Throwable {
+     page.enterUserPass();
     }
+    @After
+    public void tearDown(Scenario scenario){
+
+    x.quit();
+
+    }
+
+
 }

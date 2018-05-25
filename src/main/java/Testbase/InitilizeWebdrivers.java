@@ -22,18 +22,20 @@ import utility.ResourceHelper;
 
 public class InitilizeWebdrivers {
     WebDriver driver;
-
+    public InitilizeWebdrivers(WebDriver driver){
+        this.driver=driver;
+    }
 
     public  WebDriver getBrowser(String browserName) {
 
         if (browserName.equalsIgnoreCase("chrome")) {
-             DesiredCapabilities cap=DesiredCapabilities.firefox();
+             DesiredCapabilities cap=DesiredCapabilities.chrome();
              cap.setCapability("marionette",true);
             ChromeOptions op=new ChromeOptions();
-            op.setHeadless(true);
+            //op.setHeadless(true);
 
              System.setProperty("webdriver.chrome.driver",ResourceHelper.getResourcePath("drivers/chromedriver.exe"));
-             driver=new ChromeDriver(op);
+             driver=new ChromeDriver();
              String url=Testarguments.getUrl();
              driver.get(url);
 
