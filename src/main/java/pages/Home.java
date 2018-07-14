@@ -23,24 +23,22 @@ public class Home {
     }
 
     public void login(){
-        Log.info("==============="+Thread.currentThread().getStackTrace()[1].getMethodName()+"====================");
-        LOGGER.info("In login method");
         String URL=Testarguments.getUrl();
         //driver.get(URL);
     }
     public void enterUserID(){
-        Log.info("==============="+Thread.currentThread().getStackTrace()[1].getMethodName()+"====================");
-        LOGGER.info("On the page");
         String id=Testarguments.getUserId();
         //WebElement ele=driver.findElement(By.xpath());
         emailid.sendKeys(id);
 
     }
     public void enterUserPass(){
-        Log.info("==============="+Thread.currentThread().getStackTrace()[1].getMethodName()+"====================");
-        LOGGER.info("On the page");
         String pass=Testarguments.getPassword();
         //WebElement ele=driver.findElement(By.xpath("emaiPass"));
-        emaiPass.sendKeys(pass);
+        emaiPass.sendKeys(pass);//
+
+        //
+        //
+        //
     }
 }
