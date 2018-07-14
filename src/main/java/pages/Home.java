@@ -38,7 +38,7 @@ public class Home {
         emaiPass.sendKeys(pass);//
 
         //
-        //nbzxcbmcxmcxmz mxzcbmnnbmbm
+        //nbzxcbmcxmcxmmnnbmbm
         //love
         //i  love the god nbamsbkb
 
