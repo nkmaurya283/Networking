@@ -13,5 +13,6 @@ public class Chromemain extends MobileBaseChrome{
         AndroidDriver<AndroidElement> driver=capabilities();
         driver.get("https://google.com");
         System.out.println("");
+        System.out.println();
     }
 }
