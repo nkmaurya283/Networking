@@ -34,7 +34,7 @@ public class InitilizeWebdrivers {
             ChromeOptions op=new ChromeOptions();
             //op.setHeadless(true);
 
-             System.setProperty("webdriver.chrome.driver",ResourceHelper.getResourcePath("drivers/chromedriver.exe"));
+             System.setProperty("webdriver.chrome.driver","E:\\downloads\\Compressed\\Selenium jars\\chromedriver.exe");
              driver=new ChromeDriver();
              String url=Testarguments.getUrl();
              driver.get(url);
