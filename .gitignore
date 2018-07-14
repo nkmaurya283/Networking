@@ -3,3 +3,9 @@ target/*
 .metadata/*
 .idea/*
 /Networking.iml
+/target/
+.classpath
+.project
+.settings/
+
+
