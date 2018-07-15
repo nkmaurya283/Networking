@@ -36,7 +36,7 @@ public class Home {
         String pass=Testarguments.getPassword();
         //WebElement ele=driver.findElement(By.xpath("emaiPass"));
         emaiPass.sendKeys(pass);//
-
+//
         //
         //nbzxcbmcxmcxmmnnbmbm
         //love
