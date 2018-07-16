@@ -39,7 +39,7 @@ public class Home {
 //
         //
         //nbzxcbmcxmcxmmnnbmbm
-        //i  love the god nbamsbkb
+        //i  love the god nbamkb
 //Navne
          
         //
